@@ -21,6 +21,7 @@ setup(
     },
     install_requires=[
         'six',
+        'pytz',
     ],
     setup_requires = [
         'versiontools >= 1.8',

@@ -116,16 +116,6 @@ class TestTextHelpers(unittest.TestCase):
         with self.assertRaises(ParameterError):
             value = self.sd.words(10, 5)
 
-    def test_email(self):
-        value = self.sd.email()
-        # TODO: Validate email
-        # validate_email(value)
-
-    def test_url(self):
-        value = self.sd.url()
-        # TODO: Validate url
-        # URLValidator()(value)
-
     def test_sentence(self):
         for x in range(1, 10):
             value = self.sd.sentence()
@@ -161,13 +151,10 @@ class TestTextHelpers(unittest.TestCase):
 
     def test_slug(self):
         value = self.sd.slug()
-        # TODO Validate slug
-        # validate_slug(value)
 
         value = self.sd.slug(5, 5)
         self.assertEqual(len(value.split(' ')), 1)
-        # TODO Validate slug
-        # validate_slug(value)
+        self.assertEqual(len(value.split('-')), 5)
 
         with self.assertRaises(ParameterError):
             value = self.sd.slug(10, 5)

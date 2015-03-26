@@ -42,7 +42,7 @@ You can build any kind of object using the :code:`SampleData` class.
       for x in range(instances):
           data = {
               "slug": sd.slug(2, 3),
-              "name": sd.name(2, 3),
+              "name": sd.name('us'),
               "claim": sd.sentence(),
               "description": sd.paragraph(),
               "email": sd.email(),
@@ -51,7 +51,7 @@ You can build any kind of object using the :code:`SampleData` class.
               "birth_date": sd.past_date(),
               "expected_death_date": sd.future_date(),
           }
-          users.append(instance)
+          users.append(data)
       return users
 
 

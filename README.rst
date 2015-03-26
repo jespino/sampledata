@@ -32,6 +32,7 @@ Quick start
 You can build any kind of object using the :code:`SampleData` class.
 
 .. code:: python
+
   def generate_random_users(instances):
       sd = SampleData(seed=123)
 

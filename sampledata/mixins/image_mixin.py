@@ -47,13 +47,7 @@ class ImageMixin(object):
 
         im = generator.generate(self, width, height)
 
-        tf = NamedTemporaryFile(delete=False, suffix=".png")
-        tf.close()
+        stream = io.BytesIO()
+        im.save(stream, format="png")
 
-        im.save(tf.name)
-
-        fd = open(tf.name, 'rb')
-        stream = io.BytesIO(fd.read())
-        fd.close()
-        os.unlink(tf.name)
-        return stream
+        return stream.getvalue()

@@ -1,5 +1,7 @@
 import json
 import os.path
+import codecs
+
 
 from sampledata.exceptions import ParameterError
 
@@ -15,7 +17,7 @@ class Name(object):
         if not os.path.exists(locale_path):
             raise ParameterError('Not valid locale')
 
-        fd = open(locale_path, 'r', encoding='utf-8')
+        fd = codecs.open(locale_path, 'r', encoding='utf-8')
         Name.data[locale] = json.load(fd)
         fd.close()
 
@@ -70,7 +72,7 @@ class Surname(object):
         if not os.path.exists(locale_path):
             raise ParameterError('Not valid locale')
 
-        fd = open(locale_path, 'r', encoding='utf-8')
+        fd = codecs.open(locale_path, 'r', encoding='utf-8')
         Surname.data[locale] = json.load(fd)
         fd.close()
 

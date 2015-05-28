@@ -50,4 +50,4 @@ class ImageMixin(object):
         stream = io.BytesIO()
         im.save(stream, format="png")
 
-        return stream.getvalue()
+        return stream

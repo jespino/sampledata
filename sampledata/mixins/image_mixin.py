@@ -49,5 +49,6 @@ class ImageMixin(object):
 
         stream = io.BytesIO()
         im.save(stream, format="png")
+        stream.seek(0)
 
         return stream

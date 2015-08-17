@@ -1,5 +1,7 @@
 import unittest
 
+import decimal
+import math
 import string
 import datetime
 import os
@@ -72,6 +74,20 @@ class TestNumberHelpers(unittest.TestCase):
 
         with self.assertRaises(ParameterError):
             self.sd.number_string(-1)
+
+    def test_decimal(self):
+        value = self.sd.decimal(5, 3)
+
+        self.assertTrue(isinstance(value, decimal.Decimal))
+
+        (entire, fractional) = divmod(value, 1)
+
+        self.assertTrue(len(str(entire)) == 5)
+
+        self.assertTrue(entire >= decimal.Decimal(10000))
+        self.assertTrue(entire < decimal.Decimal(100000))
+
+        self.assertTrue(len(str(fractional)) == 5)
 
 
 class TestTextHelpers(unittest.TestCase):

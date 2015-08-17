@@ -1,5 +1,6 @@
 import sys
 import random
+import decimal
 
 from ..exceptions import ParameterError
 
@@ -43,3 +44,17 @@ class NumberMixin(object):
             raise ParameterError('ndigits is less than 0')
 
         return u''.join(random.choice(u'0123456789') for i in range(ndigits))
+
+    def decimal(self, digits, prec):
+        """Random decimal from a number of digits and prec"""
+
+        if digits == 0:
+            entire_part = "0"
+        else:
+            entire_part = str(self.digits(digits))
+
+        if prec == 0:
+            decimal_part = "0"
+        decimal_part = str(self.digits(prec))
+
+        return decimal.Decimal("{}.{}".format(entire_part, decimal_part))

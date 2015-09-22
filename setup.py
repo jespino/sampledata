@@ -17,7 +17,7 @@ setup(
     include_package_data = True,
     packages = find_packages(),
     package_data={
-        'sampledata': ['static/*', 'l10n/names/*',]
+        'sampledata': ['static/*', 'l10n/names/*', 'l10n/cities/*',]
     },
     install_requires=[
         'six',

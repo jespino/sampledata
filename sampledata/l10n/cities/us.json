@@ -1,0 +1,27 @@
+{
+    "cities_number": 1,
+    "cities": [
+        ["Madrid", 1],
+        ["Barcelona", 1],
+        ["Paris", 1],
+        ["Rome", 1],
+        ["Bern", 1],
+        ["Lisbon", 1],
+        ["London", 1],
+        ["Dublin", 1],
+        ["Edimburgh", 1],
+        ["Berlin", 1],
+        ["Munich", 1],
+        ["Amsterdam", 1],
+        ["Brussels", 1],
+        ["Varsov", 1],
+        ["Athens", 1],
+        ["New York", 1],
+        ["Austin", 1],
+        ["San Francisco", 1],
+        ["Buenos Aires", 1],
+        ["Montevideo", 1],
+        ["Pretoria", 1],
+        ["Mexico DF", 1]
+    ]
+}

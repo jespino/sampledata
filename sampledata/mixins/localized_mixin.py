@@ -1,6 +1,7 @@
 import random
 
 from sampledata.l10n.names import Name, Surname, FullName
+from sampledata.l10n.cities import City
 
 from ..exceptions import ParameterError
 
@@ -70,3 +71,6 @@ class LocalizedMixin(object):
         else:
             # Only works with implemented locales
             raise ParameterError("Not valid locale")
+
+    def city(self, locale=None, number=None, as_list=False):
+        return City().generate(self, locale, number, as_list)

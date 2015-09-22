@@ -174,6 +174,12 @@ Localized methods
 
     Supported locales: es
 
+.. py:method:: SampleData.city(locale=None, number=1, as_list=False)
+
+    Return a string or list of big cities
+
+    Supported locales: es, us
+
 Image methods
 -------------
 

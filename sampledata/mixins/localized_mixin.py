@@ -73,8 +73,8 @@ class LocalizedMixin(object):
             # Only works with implemented locales
             raise ParameterError("Not valid locale")
 
-    def city(self, locale=None, number=None, as_list=False):
-        return City().generate(self, locale, number, as_list)
+    def city(self, locale=None):
+        return City().generate(self, locale)
 
     def occupation(self, locale=None):
         return Occupation().generate(self, locale)

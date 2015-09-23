@@ -493,27 +493,11 @@ class TestLocalizedHelpers(unittest.TestCase):
         value = self.sd.city()
         self.assertTrue(isinstance(value, six.string_types))
 
-        value = self.sd.city(as_list=True)
-        self.assertTrue(isinstance(value, list))
-        self.assertEqual(len(value), 1)
+        value = self.sd.city(locale='es')
+        self.assertTrue(isinstance(value, six.string_types))
 
-        value = self.sd.city(number=3, as_list=True)
-        self.assertTrue(isinstance(value, list))
-        self.assertEqual(len(value), 3)
-
-        value = self.sd.city(locale='es', as_list=True)
-        self.assertTrue(isinstance(value, list))
-        self.assertEqual(len(value), 1)
-
-        value = self.sd.city(locale='us', as_list=True)
-        self.assertTrue(isinstance(value, list))
-        self.assertEqual(len(value), 1)
-
-        with self.assertRaises(ParameterError):
-            value = self.sd.city(number=0)
-
-        with self.assertRaises(ParameterError):
-            value = self.sd.city(number=-1)
+        value = self.sd.city(locale='us')
+        self.assertTrue(isinstance(value, six.string_types))
 
         with self.assertRaises(ParameterError):
             value = self.sd.city(locale="not-valid-locale")

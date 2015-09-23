@@ -180,6 +180,12 @@ Localized methods
 
     Supported locales: es, us
 
+.. py:method:: SampleData.occupation(locale=None)
+
+    Returns an occupation
+
+    Supported locales: us
+
 Image methods
 -------------
 

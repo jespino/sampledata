@@ -174,15 +174,15 @@ Localized methods
 
     Supported locales: es
 
-.. py:method:: SampleData.city(locale=None, number=1, as_list=False)
+.. py:method:: SampleData.city(locale=None)
 
-    Return a string or list of big cities
+    Return a city
 
     Supported locales: es, us
 
 .. py:method:: SampleData.occupation(locale=None)
 
-    Returns an occupation
+    Return an occupation
 
     Supported locales: us
 

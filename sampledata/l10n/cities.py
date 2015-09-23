@@ -25,13 +25,7 @@ class City(object):
         if locale not in City.data:
             self.__load_locale(locale)
 
-        return [x[0] for x in City.data[locale]['cities']]
-
-    def get_cities_number(self, locale):
-        if locale not in City.data:
-            self.__load_locale(locale)
-
-        return City.data[locale]['cities_number']
+        return [x for x in City.data[locale]['cities']]
 
     def all_cities(self):
         cities = []
@@ -40,25 +34,10 @@ class City(object):
 
         return cities
 
-    def generate(self, sd, locale=None, number=None, as_list=False):
+    def generate(self, sd, locale=None):
         if locale:
             cities = self.get_cities(locale)
-            if number is None:
-                number = self.get_cities_number(locale)
         else:
             cities = self.all_cities()
 
-        if number is None:
-            number = 1
-
-        if number < 1:
-            raise ParameterError("number must be greater than 1")
-
-        result = []
-        for x in range(number):
-            result.append(sd.choice(cities))
-
-        if as_list:
-            return result
-
-        return ' '.join(result)
+        return sd.choice(cities)

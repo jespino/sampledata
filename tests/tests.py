@@ -518,6 +518,16 @@ class TestLocalizedHelpers(unittest.TestCase):
         with self.assertRaises(ParameterError):
             value = self.sd.city(locale="not-valid-locale")
 
+    def test_occupation(self):
+        value = self.sd.occupation()
+        self.assertTrue(isinstance(value, six.string_types))
+
+        value = self.sd.occupation(locale='us')
+        self.assertTrue(isinstance(value, six.string_types))
+
+        with self.assertRaises(ParameterError):
+            value = self.sd.occupation(locale="not-valid-locale")
+
 class TestImageHelpers(unittest.TestCase):
     @classmethod
     def setUpClass(cls):

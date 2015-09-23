@@ -1,3 +1,30 @@
+0.3.5
+=====
+
+  - Add cities generator
+  - Add ocupations generator
+  - Add skills generator
+
+0.3.4
+=====
+
+  - Add decimal generator
+
+0.3.3
+=====
+
+  - Fixed image generation
+
+0.3.2
+=====
+
+  - Fixed tests
+
+0.3.1
+=====
+
+  - Fixed problem with locale files encoding
+
 0.3.0
 =====
 

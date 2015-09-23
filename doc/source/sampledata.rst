@@ -186,6 +186,14 @@ Localized methods
 
     Supported locales: us
 
+.. py:method:: SampleData.skill(locale=None, subtype=None)
+
+    Return a skill
+
+    Supported locales: es, us
+
+    Supported subtypes: development, science, management
+
 Image methods
 -------------
 

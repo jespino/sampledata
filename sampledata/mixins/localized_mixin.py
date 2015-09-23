@@ -3,6 +3,7 @@ import random
 from sampledata.l10n.names import Name, Surname, FullName
 from sampledata.l10n.cities import City
 from sampledata.l10n.occupations import Occupation
+from sampledata.l10n.skills import Skill
 
 from ..exceptions import ParameterError
 
@@ -78,3 +79,6 @@ class LocalizedMixin(object):
 
     def occupation(self, locale=None):
         return Occupation().generate(self, locale)
+
+    def skill(self, locale=None, subtype=None):
+        return Skill().generate(self, locale, subtype)

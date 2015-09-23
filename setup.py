@@ -22,6 +22,7 @@ setup(
             'l10n/names/*',
             'l10n/cities/*',
             'l10n/occupations/*',
+            'l10n/skills/*',
         ]
     },
     install_requires=[

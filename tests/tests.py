@@ -512,6 +512,34 @@ class TestLocalizedHelpers(unittest.TestCase):
         with self.assertRaises(ParameterError):
             value = self.sd.occupation(locale="not-valid-locale")
 
+    def test_skill(self):
+        value = self.sd.skill()
+        self.assertTrue(isinstance(value, six.string_types))
+
+        value = self.sd.skill(locale='us', subtype='development')
+        self.assertTrue(isinstance(value, six.string_types))
+
+        value = self.sd.skill(locale='us')
+        self.assertTrue(isinstance(value, six.string_types))
+
+        value = self.sd.skill(locale='es')
+        self.assertTrue(isinstance(value, six.string_types))
+
+        with self.assertRaises(ParameterError):
+            value = self.sd.skill(locale="not-valid-locale")
+
+        value = self.sd.skill(subtype='science')
+        self.assertTrue(isinstance(value, six.string_types))
+
+        value = self.sd.skill(subtype='development')
+        self.assertTrue(isinstance(value, six.string_types))
+
+        value = self.sd.skill(subtype='management')
+        self.assertTrue(isinstance(value, six.string_types))
+
+        with self.assertRaises(ParameterError):
+            value = self.sd.skill(subtype="not-valid-locale")
+
 class TestImageHelpers(unittest.TestCase):
     @classmethod
     def setUpClass(cls):

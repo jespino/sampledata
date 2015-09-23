@@ -1,0 +1,14 @@
+{
+    "skills": {
+        "development":  [
+           "Groovy",
+           "MySQL"
+       ],
+       "science": [
+           "Asrophysics"
+       ],
+       "management": [
+           "Project management"
+       ]
+   }
+}

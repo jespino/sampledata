@@ -1,0 +1,16 @@
+{
+    "skills": {
+        "development":  [
+           "Groovy",
+           "PHP",
+           "Django"
+       ],
+       "science": [
+           "Big data",
+           "Data mining"
+       ],
+       "management": [
+           "Gestión de proyectos"
+       ]
+   }
+}

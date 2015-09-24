@@ -1,3 +1,8 @@
+0.3.7
+=====
+
+  - Add skills (for multiple skills) generator
+
 0.3.6
 =====
 

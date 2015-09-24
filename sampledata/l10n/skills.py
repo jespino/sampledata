@@ -2,6 +2,7 @@ import json
 import os.path
 import codecs
 import six
+import random
 
 
 from sampledata.exceptions import ParameterError
@@ -36,7 +37,10 @@ class Skill(object):
         return skills
 
     def generate(self, sd, locale=None, subtype=None):
+        skills = self.generate_skills(sd, locale=locale, subtype=subtype)
+        return sd.choice(skills)
 
+    def generate_skills(self, sd, locale=None, subtype=None, total=None):
         if locale and subtype:
             self.get_skills(locale)
             if subtype not in Skill.data[locale]['skills']:
@@ -60,4 +64,12 @@ class Skill(object):
         else:
             skills = self.all_skills()
 
-        return sd.choice(skills)
+        random.shuffle(skills)
+
+        if total:
+            if not isinstance(total, int):
+                raise ParameterError('Not valid total')
+            return skills[0:total]
+
+        return skills
+

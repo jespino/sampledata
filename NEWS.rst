@@ -1,3 +1,8 @@
+0.3.6
+=====
+
+  - Including json files of occupations, cities and skills.
+
 0.3.5
 =====
 

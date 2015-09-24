@@ -1,3 +1,6 @@
 include LICENSE NEWS.rst README.rst
 include sampledata/static/*
 include sampledata/l10n/names/*
+include sampledata/l10n/occupations/*
+include sampledata/l10n/cities/*
+include sampledata/l10n/skills/*

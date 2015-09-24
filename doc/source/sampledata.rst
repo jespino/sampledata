@@ -194,6 +194,14 @@ Localized methods
 
     Supported subtypes: development, science, management
 
+.. py:method:: SampleData.skills(locale=None, subtype=None, total=None)
+
+    Return a list of skills, as much as total. If total=None, return all skills
+
+    Supported locales: es, us
+
+    Supported subtypes: development, science, management
+
 Image methods
 -------------
 

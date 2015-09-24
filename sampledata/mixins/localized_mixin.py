@@ -82,3 +82,6 @@ class LocalizedMixin(object):
 
     def skill(self, locale=None, subtype=None):
         return Skill().generate(self, locale, subtype)
+
+    def skills(self, locale=None, subtype=None, total=None):
+        return Skill().generate_skills(self, locale, subtype, total)

@@ -1,17 +1,15 @@
 Sample Data
 ===========
 
-.. image:: https://travis-ci.org/jespino/sampledata.png?branch=master
+.. image:: https://img.shields.io/travis/jespino/sampledata/master.svg
     :target: https://travis-ci.org/jespino/sampledata
 
-.. image:: https://coveralls.io/repos/jespino/sampledata/badge.png?branch=master
+.. image:: https://img.shields.io/coveralls/jespino/sampledata.svg
     :target: https://coveralls.io/r/jespino/sampledata?branch=master
 
-.. image:: https://pypip.in/v/sampledata/badge.png
-    :target: https://crate.io/packages/sampledata
+.. image:: https://img.shields.io/pypi/v/sampledata.svg
+    :target: https://pypi.python.org/pypi/sampledata
 
-.. image:: https://pypip.in/d/sampledata/badge.png
-    :target: https://crate.io/packages/sampledata
 
 App to automatically populate django database.
 

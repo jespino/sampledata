@@ -15,7 +15,7 @@ setup(
     url = 'https://github.com/jespino/sampledata',
     license = 'BSD',
     include_package_data = True,
-    packages = find_packages(),
+    packages = find_packages(exclude=['tests']),
     package_data={
         'sampledata': [
             'static/*',
